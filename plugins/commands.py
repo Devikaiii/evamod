@@ -48,9 +48,9 @@ async def start(client, message):
             InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Madara_Updates')
             ],[
             InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('🎗️ ᴀʙᴏᴜᴛ', callback_data='about')
             ],[
-            InlineKeyboardButton('✖️ ᴄʟᴏsᴇ ✖️', callback_data='close_data')
+            InlineKeyboardButton('✖️ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✖️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -95,7 +95,7 @@ async def start(client, message):
             InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('🎗️ ᴀʙᴏᴜᴛt', callback_data='about')
             ],[
-            InlineKeyboardButton('✖️ ᴄʟᴏsᴇ ✖️', callback_data='close_data')
+            InlineKeyboardButton('✖️ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✖️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
