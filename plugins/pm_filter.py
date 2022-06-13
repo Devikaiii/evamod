@@ -410,7 +410,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Madara_Updates')
         ], [
             InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('🎗️ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
         ], [
             InlineKeyboardButton('✖️ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✖️', callback_data='close_data')
         ]]
