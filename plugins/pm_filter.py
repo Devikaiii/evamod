@@ -510,7 +510,7 @@ buttons = [[
 ], [
     InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data = 'help'),
     InlineKeyboardButton('🎗️ ᴀʙᴏᴜᴛ', callback_data = 'about')
-],[
+], [
     InlineKeyboardButton('✖️ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✖️',callback_data = close_data')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -539,7 +539,7 @@ buttons = [[
     )
     elif query.data == "about":
     buttons = [[
-        InlineKeyboardButton('🤖 Updates', url = 'https://t.me/TeamEvamaria'),
+        InlineKeyboardButton('🤖 Updates', url = 'https://t.me/Madara_Updates'),
         InlineKeyboardButton('♥️ Source', callback_data = 'source')
     ], [
         InlineKeyboardButton('🏠 Home', callback_data = 'start'),
