@@ -41,7 +41,7 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("error", show_alert=True)
+        return await query.answer("⚠︎ ᴇʀʀᴏʀ ⚠︎ ", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -404,7 +404,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Madara_Updates')
@@ -412,7 +412,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
         ], [
-            InlineKeyboardButton('🔒 ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ', callback_data='close_data')
+            InlineKeyboardButton('🔒 ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ 🔒', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
