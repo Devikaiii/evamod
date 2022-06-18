@@ -77,8 +77,7 @@ async def start(client, message):
             btn.append([InlineKeyboardButton("ᴛʀʏ ᴀɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**<u>Join our Updates channel to use this bot.</u>
-🤖 Join Channel >> 🔁 Try Again**",
+            text="**🤖 Join our Updates channel to use this bot.**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
