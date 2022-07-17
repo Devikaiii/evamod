@@ -41,14 +41,14 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("⚠︎ ᴇʀʀᴏʀ  ", show_alert=True)
+        return await query.answer("𝐓𝐡𝐢𝐬 𝐢𝐬 𝐍𝐨𝐭 𝐅𝐨𝐫 𝐘𝐨𝐮", show_alert=True)
     try:
         offset = int(offset)
     except:
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("Link Expired.", show_alert=True)
+        await query.answer("Lɪɴᴋ Exᴘɪʀᴇᴅ.", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -98,7 +98,7 @@ async def next_page(bot, query):
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"📃 Pages {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Go Next ⏭️", callback_data=f"next_{req}_{key}_{n_offset}")])
+             InlineKeyboardButton("Go Next ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
@@ -373,7 +373,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
+            await query.answer("Oᴠᴇʀ Sᴍᴀʀᴛ 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -710,7 +710,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query : {search}"
+        cap = f"Here is what i found for your query: {search}"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
